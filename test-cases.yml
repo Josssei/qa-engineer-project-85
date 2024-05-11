@@ -57,3 +57,26 @@
   - Ввести в поле Email email с пустым именем пользователя
   - Ввести в поле Email email с пустым доменным именем
   expected-result: При некорректном заполнении поля Email выскакивает сообщение об ошибке
+
+- summary: Проверка возможности регистрации при некорректном заполнении поля Password
+  requirement: При попытке отправить форму с некорректным заполнением поля Password появляется сообщение об ошибке с подсказками
+  prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: Тестовые данные Nickname = Josei Email = 0lilit6@gamail.com
+  steps: 
+  - Ввести в поле Password пароль менее 6 символов
+  - Ввести в поле Password пароль более 16 символов
+  - Ввести в поле Password пароль кириллицей 
+  - Ввести в поле Password пароль латиницей 
+  - Ввести в поле Password пароль состоящий только из букв
+  - Ввести в поле Password пароль состоящий только из цифр
+  - Ввести в поле Password пароль состоящий только из символов
+  expected-result: При некорректном заполнении поля Password выскакивает сообщение об ошибке
+
+- summary: Проверка возможности регистрации при несовпадении полей Password и Password Confirmation
+  requirement: При попытке отправить форму с несовпадающими полями Password и Password Confirmation появляется сообщение об ошибке
+  prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: Тестовые данные Nickname = Josei Email = 0lilit6@gamail.com Password = Jos0511 Password Confirmation = Jos05111
+  steps: 
+  - Ввести в поле Password пароль Jos0511
+  - Ввести в поле Password Confirmation Jos05111
+  expected-result: При несовпадении полей Password и Password Confirmation появляется сообщение об ошибке
