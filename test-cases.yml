@@ -1,1 +1,59 @@
+---
+- summary: Проверка возможности регистрации при корректном заполнении всех полей
+  requirement: Пользователь может зарегистрировать аккаунт при корректном заполненении всех полей
+  prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: Тестовые данные Nickname = Josei Email = 0lilit6@gamail.com Password = Jos0511 Password Confirmation = Jos0511
+  steps: 
+  - Заполнить поле Nickname
+  - Заполнить поле Email
+  - Заполнить поле Password
+  - Заполнить поле Password Confirmation
+  - Нажать Submit
+  expected-result: Появляется сообщение об успешной регистрации
 
+- summary: Проверка отображения сообщении об ошибке при попытке отправить форму с недостающей информацией
+  requirement: При попытке отправить форму с недостающей информацией появляется сообщение об ошибке для каждого поля 
+  prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: no data 
+  steps: 
+  - Не заполнять поле Nickname
+  - Не заполнять поле  Email
+  - Не заполнять поле  Password
+  - Не заполнять поле  Password Confirmation
+  - Нажать Submit
+  expected-result: Появляется сообщение об ошибке и подсказками для каждого поля
+
+- summary: Проверка возможности регистрации при попытке отправить форму с пустым полем
+  requirement: При попытке отправить форму с недостающей информацией появляется сообщение об ошибке
+  prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: Тестовые данные Nickname = no data Email = 0lilit6@gamail.com Password = Jos0511 Password Confirmation = Jos0511
+  steps: 
+  - Не заполнять поле Nickname
+  - Заполнить поле Email
+  - Заполнить поле Password
+  - Заполнить поле Password Confirmation
+  - Нажать Submit
+  expected-result: Появляется сообщение об ошибке для пустого поля и регистрация не завершается
+
+- summary: Проверка возможности регистрации при некорректном заполнении поля Nickname
+  requirement: При попытке отправить форму с некорректным заполнением поля Nickname появляется сообщение об ошибке с подсказками
+  prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: Тестовые данные Nickname = no data Email = 0lilit6@gamail.com Password = Jos0511 Password Confirmation = Jos0511
+  steps: 
+  - Ввести в поле Nickname имя кириллицей 
+  - Ввести в поле Nickname имя начинающееся с цифр
+  - Ввести в поле Nickname ник короче 3 символов
+  - Ввести в поле Nickname ник длиннее 16 символов
+  - Ввести в поле Nickname знаки и символы не указанные в подсказке
+  expected-result: При некорректном заполнении поля Nickname выскакивает сообщение об ошибке
+
+- summary: Проверка возможности регистрации при некорректном заполнении поля Email
+  requirement: При попытке отправить форму с некорректным заполнением поля Email появляется сообщение об ошибке с подсказками
+  prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: Тестовые данные Nickname = Josei Password = Jos0511 Password Confirmation = Jos0511
+  steps: 
+  - Ввести в поле Email email кириллицей
+  - Ввести в поле Email email без собачки
+  - Ввести в поле Email email с пустым именем пользователя
+  - Ввести в поле Email email с пустым доменным именем
+  expected-result: При некорректном заполнении поля Email выскакивает сообщение об ошибке
