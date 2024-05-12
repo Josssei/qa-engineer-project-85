@@ -145,5 +145,38 @@
   - Ввести неправильный пароль
   - Нажать Submit 
   expected-result: Пользователь не авторизуется в системе и выскакивает сообщение об ошибке
-  
 
+- summary: Проверка возможности создать новую игру с другим пользователем
+  requirement: Пользователь может создать новую игру с другим пользователем
+  prerequisites: 
+  - Авторизация в сети
+  - Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: no data
+  steps: 
+  - Нажать на кнопку Create a game
+  - Нажать Create battle
+  expected-result: Создается новая игра
+
+- summary: Проверка возможности создать новую игру с другом
+  requirement: Пользователь может создать новую игру с другом
+  prerequisites: 
+  - Авторизация в сети
+  - Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: no data
+  steps: 
+  - Нажать на кнопку Create a game
+  - Нажать кнопку With a friend 
+  - Нажать Create battle
+  expected-result: Создается новая игра с другом 
+
+- summary: Проверка возможности создать новую игру с ботом
+  requirement: Пользователь может создать новую игру с другом
+  prerequisites: 
+  - Авторизация в сети
+  - Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: no data
+  steps: 
+  - Нажать на кнопку Create a game
+  - Нажать кнопку With a friend 
+  - Нажать Create battle
+  expected-result: Создается новая игра с другом
