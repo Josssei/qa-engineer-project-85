@@ -170,13 +170,69 @@
   expected-result: Создается новая игра с другом 
 
 - summary: Проверка возможности создать новую игру с ботом
-  requirement: Пользователь может создать новую игру с другом
+  requirement: Пользователь может создать новую игру с ботом 
   prerequisites: 
   - Авторизация в сети
   - Открыта страница https://codebattle.hexlet.io/#lobby
   test-data: no data
   steps: 
   - Нажать на кнопку Create a game
-  - Нажать кнопку With a friend 
+  - Нажать кнопку With a bot 
   - Нажать Create battle
-  expected-result: Создается новая игра с другом
+  expected-result: Создается новая игра с ботом
+
+- summary: Проверка возможности установить сложность игры 
+  requirement: Пользователь может создать новую игру с разными уровнями сложности
+  prerequisites: 
+  - Авторизация в сети
+  - Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: no data
+  steps: 
+  - Нажать на кнопку Create a game
+  - Выбрать уровень сложности
+  - Нажать Create battle
+  expected-result: Создается новая игра с установленным уровнем сложности
+
+- summary: Проверка возможности установить время игры
+  requirement: Пользователь может создать новую игру с разным таймером
+  prerequisites: 
+  - Авторизация в сети
+  - Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: no data
+  steps: 
+  - Нажать на кнопку Create a game
+  - Выбрать необходимое время
+  - Нажать Create battle
+  expected-result: Создается новая игра с установленным временем
+
+- summary: Проверка возможности установить написать сообщение в чат
+  requirement: Пользователь может написать сообщение в чат
+  prerequisites: 
+  - Авторизация в сети
+  - Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: no data
+  steps: 
+  - Написать сообщение 
+  - Надать кнопку отправить
+  expected-result: Написанное сообщение появляется в чате
+
+- summary: Проверка возможности сдаться в игре
+  requirement: Пользователь может сдаться и выйти из игры
+  prerequisites: 
+  - Авторизация в сети
+  test-data: no data
+  steps: 
+  - Соаздать игру 
+  - Нажать иконку красного флага - сдаться
+  expected-result: Игра завершается проигрышем пользователя
+
+- summary: Проверка возможности сбросить написанный код
+  requirement: Пользователь может сбросить написанный код и вернуться к исходному заданию
+  prerequisites: 
+  - Авторизация в сети
+  test-data: no data
+  steps: 
+  - Соаздать игру 
+  - Нажать иконку обновить редактор
+  expected-result: Редактор обновляется и возвращается к исходному виду
+
