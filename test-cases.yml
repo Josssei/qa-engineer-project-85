@@ -95,6 +95,55 @@
   prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: no data
   steps: 
-  - Нажать Sing in with Discord
+  - Нажать Sing up with Discord
   - Ввести данные своего дискорда
   expected-result: При наличии профиля на дискорде у пользователя получается зарегистрироваться
+
+- summary: Проверка вавторизации через Dicscord
+  requirement: Возможность зарегистрировать аккаунт через Dicscord
+  prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: no data
+  steps: 
+  - Нажать Sing in with Discord
+  - Ввести данные своего дискорда
+  expected-result: У пользователя получается авторизоваться через дискорд
+
+- summary: Проверка вавторизации через Githab
+  requirement: Возможность зарегистрировать аккаунт через Dicscord
+  prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: no data
+  steps: 
+  - Нажать Sing in with Githab
+  - Ввести данные своего дискорда
+  expected-result: У пользователя получается авторизоваться через Githab
+
+- summary: Проверка возможности авторизации в системе с правильными даннаыми
+  requirement: У пользователя есть возможность зайти в свой аккаунт при введении корректных данных
+  prerequisites: Открыта страница https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+  test-data: no data
+  steps: 
+  - Ввести правильный Email
+  - Ввести правильный пароль
+  expected-result: Пользователь успешно авторизуется в системе
+
+- summary: Проверка возможности авторизации в системе с неправильным почтовым адресом
+  requirement: Пользователь не может авторизоваться в системе при неправильном почтовом адресе
+  prerequisites: Открыта страница https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+  test-data: no data
+  steps: 
+  - Ввести неправильный почтовый адрес
+  - Ввести правильный пароль
+  - Нажать Submit 
+  expected-result: Пользователь не авторизуется в системе и выскакивает сообщение об ошибке
+
+- summary: Проверка возможности авторизации в системе с неправильным паролем
+  requirement: Пользователь не может авторизоваться в системе при неправильном пароле
+  prerequisites: Открыта страница https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+  test-data: no data
+  steps: 
+  - Ввести правильный почтовый адрес
+  - Ввести неправильный пароль
+  - Нажать Submit 
+  expected-result: Пользователь не авторизуется в системе и выскакивает сообщение об ошибке
+  
+
