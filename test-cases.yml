@@ -80,3 +80,21 @@
   - Ввести в поле Password пароль Jos0511
   - Ввести в поле Password Confirmation Jos05111
   expected-result: При несовпадении полей Password и Password Confirmation появляется сообщение об ошибке
+
+- summary: Проверка возможности регистрации через Githab
+  requirement: Возможность зарегистрировать аккаунт через Githab
+  prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: no data
+  steps: 
+  - Нажать Sing in with Githab
+  - Ввести данные своего гитхаба
+  expected-result: При наличии профиля на гитхабе у пользователя получается зарегистрироваться
+
+- summary: Проверка возможности регистрации через Discord
+  requirement: Возможность зарегистрировать аккаунт через Dicscord
+  prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: no data
+  steps: 
+  - Нажать Sing in with Discord
+  - Ввести данные своего дискорда
+  expected-result: При наличии профиля на дискорде у пользователя получается зарегистрироваться
