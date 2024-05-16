@@ -11,6 +11,27 @@
   - Нажать Submit
   expected-result: Появляется сообщение об успешной регистрации
 
+- summary: Проверка получения письма подтверждения при регистрации по емейл
+  requirement: Пользователь должен получить письмо подтверждения регистрации на почтовый ящик
+  prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: Тестовые данные Nickname = Josei Email = 0lilit6@gamail.com Password = Jos0511 Password Confirmation = Jos0511
+  steps: 
+  - Зарегистрировать существующий почтовый ящик
+  - Подтвердить регистрацию на почте
+  expected-result: Пользователю приходит письмо о подтверждении регистрации и почтового ящика
+
+- summary: Проверка возможности регистрации на несуществующий почтовый ящик 
+  requirement: Пользователь не может зарегистрировать аккаунт на несуществующий емейл или на чужой емейл
+  prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
+  test-data: Тестовые данные Nickname = Josei Email = lilit@gamail.com Password = Jos0511 Password Confirmation = Jos0511
+  steps: 
+  - Заполнить поле Nickname
+  - Заполнить поле Email
+  - Заполнить поле Password
+  - Заполнить поле Password Confirmation
+  - Нажать Submit
+  expected-result: Пользователь не может зарегистрирвоаться на чужую или несуществущую почту
+  
 - summary: Проверка отображения сообщении об ошибке при попытке отправить форму с недостающей информацией
   requirement: При попытке отправить форму с недостающей информацией появляется сообщение об ошибке для каждого поля 
   prerequisites: Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
