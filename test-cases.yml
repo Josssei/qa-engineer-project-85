@@ -164,9 +164,7 @@
 
 - summary: Проверка возможности создать новую игру с другим пользователем
   requirement: Пользователь может создать новую игру с другим пользователем
-  prerequisites: |
-  - Авторизация в сети
-  - Открыта страница https://codebattle.hexlet.io/#lobby
+  prerequisites: Авторизация в сети
   test-data: no data
   steps: 
   - Нажать на кнопку Create a game
