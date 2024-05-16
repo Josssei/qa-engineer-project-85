@@ -1,83 +1,86 @@
 - summary: Проверка возможности регистрации при корректном заполнении всех полей
-  status:
+  status: pass
+
+- summary: Проверка получения письма подтверждения при регистрации по емейл
+  status: fail
+
+- summary: Проверка невозможности регистрации на несуществующий почтовый ящик 
+  status: fail 
 
 - summary: Проверка отображения сообщении об ошибке при попытке отправить форму с недостающей информацией
-  status:
+  status: pass
 
 - summary: Проверка возможности регистрации при попытке отправить форму с пустым полем
-  status:
+  status: pass
 
 - summary: Проверка возможности регистрации при некорректном заполнении поля Nickname
-  status:
+  status: pass
 
 - summary: Проверка возможности регистрации при некорректном заполнении поля Email
-  status:
+  status: pass
 
 - summary: Проверка возможности регистрации при некорректном заполнении поля Password
-  status:
+  status: pass
 
 - summary: Проверка возможности регистрации при несовпадении полей Password и Password Confirmation
-  status:
+  status: pass
 
 - summary: Проверка возможности регистрации через Githab
-  status:
+  status: pass
 
 - summary: Проверка возможности регистрации через Discord
-  status:
+  status: pass
 
-- summary: Проверка вавторизации через Githab
-  status:
+- summary: Проверка авторизации через Githab
+  status: pass
 
 - summary: Проверка возможности авторизации в системе с правильными данными
-  status:
+  status: pass
 
 - summary: Проверка возможности авторизации в системе с неправильным почтовым адресом
-  status:
+  status: pass
 
 - summary: Проверка возможности авторизации в системе с неправильным паролем
-  status:
+  status: pass
 
 - summary: Проверка возможности создать новую игру с другим пользователем
-  status:
-  
+  status: pass
+
 - summary: Проверка возможности создать новую игру с другом
-  status:
+  status: pass
 
 - summary: Проверка возможности создать новую игру с ботом
-  status:
+  status: pass
 
 - summary: Проверка возможности установить сложность игры 
-  status:
+  status: pass
 
 - summary: Проверка возможности установить время игры
-  status:
+  status: fail
 
-- summary: Проверка возможности установить написать сообщение в чат
-  status:
+- summary: Проверка возможности написать сообщение в чат
+   status: pass
 
 - summary: Проверка возможности сдаться в игре
-  status:
+   status: pass
 
 - summary: Проверка возможности сбросить написанный код
-  status:
-
-- summary: Проверка того, что пользователь выигрывает при правильном написании кода
-  status:
-
-- summary: Проверка того, что при неправильно решении задания результат не проходит
-  status:
+   status: pass
 
 - summary: Проверка адаптивности сайта для смартфонов
-  status:
+   status: fail
 
 - summary: Проверка адаптивности сайта для планшетов
-  status:
+  status: pass
 
 - summary: Проверка адаптивности сайта для ноутбуков
-  status:
+  status: pass
 
 - summary: Проверка безопасности данных
-  status:
+   status: pass
 
 - summary: Проверка на кроссбраузерность в Chrome
-  status:
+   status: pass
+
+- summary: Проверка на кроссбраузерность в Оpera
+   status: pass
