@@ -59,16 +59,16 @@
   status: fail
 
 - summary: Проверка возможности написать сообщение в чат
-   status: pass
+  status: pass
 
 - summary: Проверка возможности сдаться в игре
-   status: pass
+  status: pass
 
 - summary: Проверка возможности сбросить написанный код
-   status: pass
+  status: pass
 
 - summary: Проверка адаптивности сайта для смартфонов
-   status: fail
+  status: fail
 
 - summary: Проверка адаптивности сайта для планшетов
   status: pass
@@ -77,10 +77,10 @@
   status: pass
 
 - summary: Проверка безопасности данных
-   status: pass
+  status: pass
 
 - summary: Проверка на кроссбраузерность в Chrome
-   status: pass
+  status: pass
 
 - summary: Проверка на кроссбраузерность в Оpera
-   status: pass
+  status: pass
