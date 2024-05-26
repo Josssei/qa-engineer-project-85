@@ -85,7 +85,7 @@
   requirement: Возможность зарегистрировать аккаунт через Github
   prerequisites: У пользователя есть аккаунт на Github
   test-data: no data
-  steps: |
+  steps: 
   - Нажать Sing in with Github
   - Ввести данные своего гитхаба
   expected-result: При наличии профиля на гитхабе у пользователя получается зарегистрироваться
