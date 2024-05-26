@@ -87,14 +87,14 @@
   - Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   - У пользователя есть аккаунт на Github
   test-data: no data
-  steps: 
+  steps: |
   - Нажать Sing in with Github
   - Ввести данные своего гитхаба
   expected-result: При наличии профиля на гитхабе у пользователя получается зарегистрироваться
 
 - summary: Проверка возможности регистрации через Discord
   requirement: Возможность зарегистрировать аккаунт через Dicscord
-  prerequisites: 
+  prerequisites: |
   - Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   - У пользовтеля есть аккаунт дискорд
   test-data: no data
@@ -105,7 +105,7 @@
 
 - summary: Проверка вавторизации через Dicscord
   requirement: Возможность зарегистрировать аккаунт через Dicscord
-  prerequisites: 
+  prerequisites: |
   - Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   - У пользователя есть аккаунт дискорд
   test-data: no data
@@ -116,7 +116,7 @@
 
 - summary: Проверка вавторизации через Github
   requirement: Возможность зарегистрировать аккаунт через Dicscord
-  prerequisites: 
+  prerequisites: |
   - Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   - У пользователя есть аккаунт на Github
   test-data: no data
@@ -268,3 +268,23 @@
   - Зайти в tournaments
   - Нажать Show 
   expected-result: Пользователю видно как проходит турнир
+
+- summary: Проверка возможности изменить имя в настройках
+  requirement: Пользователь может сменить имя
+  prerequisites: Авторизация в сети
+  test-data: no data
+  steps: 
+  - Зайти в настройки
+  - Сменить ник
+  - Нажать save
+  expected-result: У пользователя меняется ник
+
+- summary: Проверка возможности изменить язык программирования в настройках
+  requirement: Пользователь может язык программирования
+  prerequisites: Авторизация в сети
+  test-data: no data
+  steps: 
+  - Зайти в настройки
+  - Сменить язык
+  - Нажать save
+  expected-result: У пользователя меняется язык программирования
