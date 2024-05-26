@@ -83,9 +83,7 @@
 
 - summary: Проверка возможности регистрации через Github
   requirement: Возможность зарегистрировать аккаунт через Github
-  prerequisites: 
-  - Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
-  - У пользователя есть аккаунт на Github
+  prerequisites: У пользователя есть аккаунт на Github
   test-data: no data
   steps: |
   - Нажать Sing in with Github
@@ -94,9 +92,7 @@
 
 - summary: Проверка возможности регистрации через Discord
   requirement: Возможность зарегистрировать аккаунт через Dicscord
-  prerequisites: |
-  - Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
-  - У пользовтеля есть аккаунт дискорд
+  prerequisites: У пользовтеля есть аккаунт дискорд
   test-data: no data
   steps: 
   - Нажать Sing up with Discord
@@ -105,9 +101,7 @@
 
 - summary: Проверка вавторизации через Dicscord
   requirement: Возможность зарегистрировать аккаунт через Dicscord
-  prerequisites: |
-  - Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
-  - У пользователя есть аккаунт дискорд
+  prerequisites: У пользователя есть аккаунт дискорд
   test-data: no data
   steps: 
   - Нажать Sing in with Discord
@@ -115,14 +109,12 @@
   expected-result: У пользователя получается авторизоваться через дискорд
 
 - summary: Проверка вавторизации через Github
-  requirement: Возможность зарегистрировать аккаунт через Dicscord
-  prerequisites: |
-  - Открыта страница https://codebattle.hexlet.io/users/new?locale=en&next=%2F
-  - У пользователя есть аккаунт на Github
+  requirement: Возможность зарегистрировать аккаунт через Github
+  prerequisites: У пользователя есть аккаунт на Github
   test-data: no data
   steps: 
   - Нажать Sing in with Githab
-  - Ввести данные своего дискорда
+  - Ввести данные своего Github
   expected-result: У пользователя получается авторизоваться через Githab
 
 - summary: Проверка возможности авторизации в системе с правильными данными
@@ -230,7 +222,7 @@
   - Нажать иконку обновить редактор
   expected-result: Редактор обновляется и возвращается к исходному виду
 
-- summary: Проверка механики выигрыша при правильно написанном коде
+- summary: Проверка выигрыша при правильно написанном коде 
   requirement: Пользователь выигрыввает, если код написан правильно
   prerequisites: Авторизация в сети
   test-data: no data
@@ -240,7 +232,7 @@
   - Нажать кнопку run 
   expected-result: Игра завершается выигрышем пользователя
 
-- summary: Проверка механики проверки неправильно написанного кода
+- summary: Проверка проигрыша при неправильно написанном коде
   requirement: Пользователь не выигрывает, если код написан неправильно
   prerequisites: Авторизация в сети
   test-data: no data
@@ -288,3 +280,21 @@
   - Сменить язык
   - Нажать save
   expected-result: У пользователя меняется язык программирования
+
+- summary: Проверка возможности просмотреть свой или чужой рейтинг
+  requirement: Пользователь посмотреть свой или чужой рейтинг
+  prerequisites: Авторизация в сети
+  test-data: no data
+  steps: 
+  - Зайти в User raiting
+  - Вести любой ник
+  expected-result: Высвечивается пользователь с таким ником и его рейтинг
+
+- summary: Проверка возможности просмотреть историю своих игр
+  requirement: Пользователь может посмотреть историю игр
+  prerequisites: Авторизация в сети
+  test-data: no data
+  steps: 
+  - Зайти в My profile
+  - Зайти Completed games
+  expected-result: Пользователь может просмотреть историю игр и подробную информацию об играх
